@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-grey-50 font-sans text-charcoal antialiased;
+  }
+  h1 {
+    @apply text-2xl font-bold tracking-tight text-navy;
+  }
+  h2 {
+    @apply text-lg font-semibold text-navy;
+  }
+}
+
+@layer components {
+  .money {
+    font-variant-numeric: tabular-nums;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+  }
+}
